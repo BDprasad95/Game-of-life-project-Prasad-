@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: game-of-life
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: game-of-life
+  template:
+    metadata:
+      labels:
+        app: game-of-life
+    spec:
+      containers:
+      - name: game-of-life
+        image: 
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 80m
+            memory: 256Mi
+        ports:
+        - containerPort: 9000
+          name: GOF
