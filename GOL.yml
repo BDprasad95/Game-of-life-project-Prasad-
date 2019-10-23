@@ -23,5 +23,5 @@ spec:
             cpu: 80m
             memory: 256Mi
         ports:
-        - containerPort: 9000
+        - containerPort: 8080
           name: GOF
